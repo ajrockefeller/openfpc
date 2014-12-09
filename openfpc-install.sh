@@ -53,6 +53,8 @@ IAM=$(whoami)
 DATE=$(date)
 PATH=$PATH:/usr/sbin
 
+
+
 function die()
 {
         echo "$1"
@@ -520,6 +522,17 @@ function installstatus()
 	fi
 	echo
 }
+
+die "
+################################################################################
+ WARNING!! OpenFPC hosting was moved to github.
+ If you are reading this message, you are trying to install code from 
+ an old svn store that isn't updated. Please go checkout the latest code 
+ from github.
+ If you really want to install this old release, and know what you are doing, 
+ you will need to delete this warning message from openfpc-install.sh (line 526)
+################################################################################
+ "
 
 echo -e "
 **************************************************************************
